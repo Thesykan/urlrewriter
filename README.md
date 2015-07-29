@@ -38,7 +38,9 @@ Installation
 
    ```XML
    <rewriter>
-     <if url="/tags/(.+)" rewrite="/tagcloud.aspx?tag=$1" />
+     <if url="/tags/(.+)">
+       <rewrite to="/tagcloud.aspx?tag=$1" />
+     </if>
      <!-- same thing as <rewrite url="/tags/(.+)" to="/tagcloud.aspx?tag=$1" /> -->
    </rewriter>
    ```
